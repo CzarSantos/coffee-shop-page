@@ -5,11 +5,67 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
   <title>Coffee Shop</title>
 </head>
 
 <body>
+  <div class="menu">
+    <div class="logo">
+      <span>the</span>CoffeeShop
+    </div>
+
+    <nav class="nav">
+      <i id='icone' class="fas fa-bars"></i>
+      <ul class="nav-menu">
+        <li>
+          <a href="#">coffe</a>
+        </li>
+        <li>
+          <a href="#">bean</a>
+        </li>
+        <li>
+          <a href="#">about</a>
+        </li>
+        <li>
+          <a href="#">find us</a>
+        </li>
+        <li>
+          <a href="#">contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <header>
+    <div class="banner">
+
+      <div class="container texts">
+        <h1>
+          <span>the</span>CoffeeShop
+        </h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <a href="#">more</a>
+      </div>
+
+    </div>
+  </header>
+
+
+
 
 </body>
+
+<script>
+  const btn = document.querySelector('#icone')
+  const nav = document.querySelector('.nav')
+
+  function menu() {
+    nav.classList.toggle('active')
+  }
+
+  btn.addEventListener('click', menu)
+</script>
 
 </html>

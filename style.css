@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,600&family=Roboto:wght@100;300;400&family=Syne+Tactile&display=swap");
+
+:root {
+  --bg-m: #fff;
+  --fc: #5e5e5e;
+  --bg-hover: #f1f1f1;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.1em;
+  color: var(--fc);
+}
+
+a {
+  text-decoration: none;
+  color: var(--fc);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/*MENU-------------------------------*/
+
+.menu {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  justify-content: space-around;
+  background: var(--bg-m);
+}
+
+.menu .nav .nav-menu {
+  display: flex;
+  gap: 8px;
+}
+
+.menu .nav .nav-menu li {
+  list-style: none;
+}
+
+.menu .nav .nav-menu li a {
+  list-style: none;
+  display: block;
+  padding: 3px;
+}
+.menu .nav .nav-menu li a:hover {
+  background: var(--bg-hover);
+  color: rgb(129, 129, 129);
+  border-radius: 3px;
+}
+
+/* BANNER--------------------------------- */
+
+header {
+  width: 100%;
+  position: relative;
+  height: 300px;
+  background: #000;
+}
+
+header .banner {
+  background: url("https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1037&q=80");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+header .banner .texts {
+  display: block;
+  width: 100%;
+  padding: 0 10px;
+  color: #fff;
+}
+
+header .banner .texts h1,
+p {
+  max-width: 400px;
+  /* text-shadow: 1px 1px 1px #a5a4a4; */
+}
+
+header .banner .texts h1 {
+  font-size: 1.9em;
+  font-family: "Josefin Sans", sans-serif;
+  padding-bottom: 10px;
+}
+header .banner .texts p {
+  padding-bottom: 8px;
+}
+header .banner .texts h1 > span {
+  font-size: 15px;
+  color: #b48c1c;
+}
+
+header .banner .texts a {
+  display: block;
+  width: 80px;
+  text-align: center;
+  padding: 3px;
+  border: 1px solid #fff;
+  background: #da9627;
+  color: #fff;
+}
+
+/*Responsivo*/
+
+.menu .nav i {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .menu .nav i {
+    display: block;
+  }
+  .menu .nav .nav-menu {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 0;
+    height: calc(100vh - 60px);
+    background: rgb(252, 252, 252);
+    z-index: 1000;
+    text-align: center;
+
+    visibility: hidden;
+    transition: 0.3s;
+  }
+
+  .nav.active .nav-menu {
+    visibility: visible;
+    width: 100%;
+  }
+
+  .menu .nav .nav-menu li a {
+    padding: 20px;
+  }
+}
