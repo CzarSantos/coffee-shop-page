@@ -6,21 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
   <title>Coffee Shop</title>
 </head>
 
 <body>
   <div class="menu">
     <div class="logo">
-      <span>the</span>CoffeeShop
+      <span>the</span>CoffeeShop☕
     </div>
 
     <nav class="nav">
       <i id='icone' class="fas fa-bars"></i>
       <ul class="nav-menu">
         <li>
-          <a href="#">coffe</a>
+          <a href="#coffee-section">coffe</a>
         </li>
         <li>
           <a href="#">bean</a>
@@ -52,11 +52,60 @@
     </div>
   </header>
 
+  <main>
+    <section id='coffee-section'>
+      <div class="container">
+        <div class="texts-coffee">
+          <div class="text-1">
+            <h2>Coffee</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+          </div>
+          <div class="text-2">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer. </p>
+          </div>
+        </div>
+
+        <div class="description-coffee">
+          <div class="item">
+            <div class="item-coffee"><i class="fa-solid fa-mug-saucer"></i></div>
+            <span>Title</span>
+            <p>subtitle</p>
+          </div>
+          <div class="item">
+            <div class="item-coffee"><i class="fa-solid fa-user"></i></div>
+            <span>Title</span>
+            <p>subtitle</p>
+          </div>
+          <div class="item">
+            <div class="item-coffee"><i class="fa-solid fa-leaf"></i></div>
+            <span>Title</span>
+            <p>subtitle</p>
+          </div>
+          <div class="item">
+            <div class="item-coffee"><i class="fa-solid fa-location-dot"></i></div>
+            <span>Title</span>
+            <p>subtitle</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+  </main>
+
 
 
 
 </body>
-
+<script src="https://kit.fontawesome.com/2b0612ebbf.js" crossorigin="anonymous"></script>
 <script>
   const btn = document.querySelector('#icone')
   const nav = document.querySelector('.nav')
