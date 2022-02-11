@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,600&family=Roboto:wght@100;300;400&family=Syne+Tactile&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --bg-m: #fff;
   --fc: #5e5e5e;
@@ -42,6 +46,11 @@ a {
   color: #cfb364;
 }
 .menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+
   display: flex;
   width: 100%;
   height: 60px;
@@ -73,6 +82,7 @@ a {
 /* BANNER--------------------------------- */
 
 header {
+  margin-top: 60px;
   width: 100%;
   position: relative;
   height: 300px;
@@ -148,7 +158,7 @@ header .banner .texts a {
   max-width: 400px;
 }
 
-#coffee-section .texts-coffee .text-1 h2 {
+h2 {
   padding-bottom: 10px;
   position: relative;
   font-size: 18px;
@@ -198,6 +208,28 @@ h2::before {
   font-weight: 800;
 }
 
+/* BEAN-SECTION--------------------------------------------------------- */
+
+.bean-section {
+  padding: 50px 5px;
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.bean-section .img-content {
+  background: url("https://images.unsplash.com/photo-1587049016823-69ef9d68bd44?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80")
+    center;
+  background-size: cover;
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
+}
+
+.bean-section .text-content {
+  padding-top: 55px;
+}
+
 /*Responsivo---------------------------------------------*/
 
 .menu .nav i {
@@ -205,12 +237,24 @@ h2::before {
 }
 
 @media (max-width: 600px) {
+  header .banner .texts h1,
+  p,
+  a {
+    text-align: center;
+    margin: 0 auto;
+  }
+  header .banner .texts a {
+    width: 30%;
+    padding: 8px 0;
+  }
+
   .menu .nav i {
     display: block;
   }
   .menu .nav .nav-menu {
     display: block;
     position: absolute;
+    box-shadow: inset 1px 5px 10px rgb(212, 212, 212);
     top: 60px;
     left: 0;
     width: 0;
@@ -256,5 +300,20 @@ h2::before {
   }
   #coffee-section .description-coffee .item .item-coffee > i {
     font-size: 2.5em;
+  }
+
+  /* section bean */
+  .bean-section {
+    flex-direction: column;
+  }
+  .bean-section .img-content {
+    margin: 0 auto;
+  }
+  .bean-section .text-content {
+    padding: 50px 0;
+  }
+  .bean-section .text-content h2,
+  p {
+    text-align: center;
   }
 }
